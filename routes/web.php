@@ -20,3 +20,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/products', [App\Http\Controllers\ProductController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('products.index');

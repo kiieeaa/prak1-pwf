@@ -1,0 +1,26 @@
+
+   INFO  Seeding database.  
+
+  Database\Seeders\KategoriSeeder  RUNNING  
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_pertemuan3`.`kategoris`, CONSTRAINT `kategoris_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE) (Connection: mysql, Host: 127.0.0.1, Port: 3309, Database: db_pertemuan3, SQL: insert into `kategoris` (`created_at`, `name`, `product_id`, `updated_at`) values (2026-03-06 03:27:53, Elektronik, 1, 2026-03-06 03:27:53), (2026-03-06 03:27:53, Elektronik, 2, 2026-03-06 03:27:53), (2026-03-06 03:27:53, Pakaian, 3, 2026-03-06 03:27:53))
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:838
+    834???             $exceptionType = $this->isUniqueConstraintError($e)
+    835???                 ? UniqueConstraintViolationException::class
+    836???                 : QueryException::class;
+    837??? 
+  ??? 838???             throw new $exceptionType(
+    839???                 $this->getNameWithReadWriteType(),
+    840???                 $query,
+    841???                 $this->prepareBindings($bindings),
+    842???                 $e,
+
+  1   vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:53
+      PDOException::("SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_pertemuan3`.`kategoris`, CONSTRAINT `kategoris_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE)")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:53
+      PDOStatement::execute()
+
