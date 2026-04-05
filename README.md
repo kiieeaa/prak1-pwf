@@ -16,3 +16,12 @@ migrations
 <img width="1945" height="1212" alt="image" src="https://github.com/user-attachments/assets/372b7a51-65d7-4364-ad95-571dc704d877" />
 database
 <img width="1999" height="884" alt="image" src="https://github.com/user-attachments/assets/b5196f65-dbb8-48ee-a661-36ecfd59146f" />
+
+
+Tugas Prak 5
+ - bagian user
+<img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/85752309-7536-44dc-b8e8-b8804954ce8a" />
+
+- bagian admin
+<img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/2b978205-e6a2-4132-8f63-c13902222686" />
+
