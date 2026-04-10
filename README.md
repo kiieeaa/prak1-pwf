@@ -25,3 +25,24 @@ Tugas Prak 5
 - bagian admin
 <img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/2b978205-e6a2-4132-8f63-c13902222686" />
 
+Tugas prak 6
+ - tampilan sebelum tambah produk
+<img width="2560" height="1600" alt="Screenshot 2026-04-10 092918" src="https://github.com/user-attachments/assets/2257fe8b-d6ee-487d-8878-de053cc8c40a" />
+
+- menambahkan produk
+<img width="2560" height="1600" alt="Screenshot 2026-04-10 093004" src="https://github.com/user-attachments/assets/b3fd21c7-9d96-4a09-b7d5-9dcb75b0fea1" />
+
+- produk berhasil ditambahkan
+<img width="2560" height="1600" alt="Screenshot 2026-04-10 093019" src="https://github.com/user-attachments/assets/409eb583-4331-416a-9599-9a949c281d48" />
+
+- edit produk
+<img width="2560" height="1600" alt="Screenshot 2026-04-10 093038" src="https://github.com/user-attachments/assets/a760ad04-fe97-442c-ac1a-0484a46400ba" />
+
+- berhasil diedit
+<img width="2560" height="1600" alt="Screenshot 2026-04-10 093051" src="https://github.com/user-attachments/assets/e52d10ac-9add-449c-8de0-6d970fa97934" />
+
+
+
+
+
+
