@@ -9,7 +9,12 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 border-b border-gray-200">
-                    <h3 class="text-lg font-bold mb-4">Daftar Produk dan Kategori</h3>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold">Daftar Produk dan Kategori</h3>
+                        <a href="{{ route('products.create') }}" class="inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-indigo-700 active:bg-indigo-900 focus:outline-none focus:border-indigo-900 focus:ring ring-indigo-300 disabled:opacity-25 transition">
+                            Tambah Produk
+                        </a>
+                    </div>
                     
                     <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
                         <table class="w-full text-sm text-left text-gray-500">
@@ -21,6 +26,7 @@
                                     <th scope="col" class="py-3 px-6">Harga (price)</th>
                                     <th scope="col" class="py-3 px-6">Stok (qty)</th>
                                     <th scope="col" class="py-3 px-6">User</th>
+                                    <th scope="col" class="py-3 px-6 text-center">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,6 +42,9 @@
                                     <td class="py-4 px-6">Rp {{ number_format($product->price, 0, ',', '.') }}</td>
                                     <td class="py-4 px-6">{{ $product->qty }}</td>
                                     <td class="py-4 px-6">{{ $product->user->name ?? 'N/A' }}</td>
+                                    <td class="py-4 px-6 text-center">
+                                        <a href="{{ route('products.edit', $product->id) }}" class="font-medium text-blue-600 hover:underline">Edit</a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
