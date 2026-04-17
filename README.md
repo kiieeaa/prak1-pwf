@@ -41,6 +41,8 @@ Tugas prak 6
 - berhasil diedit
 <img width="2560" height="1600" alt="Screenshot 2026-04-10 093051" src="https://github.com/user-attachments/assets/e52d10ac-9add-449c-8de0-6d970fa97934" />
 
+Tugas prak 7
+<img width="2560" height="1600" alt="Screenshot 2026-04-17 090427" src="https://github.com/user-attachments/assets/80631e9d-dea5-4459-8516-3cb756874ae6" />
 
 
 
