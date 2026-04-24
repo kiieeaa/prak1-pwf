@@ -15,7 +15,7 @@
                             </h2>
                             <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Manage your product inventory</p>
                         </div>
-                        @can('manage-products')
+                        @can('manage-product')
                             <x-add-product :url="route('products.create')" :name="'Product'"/>
                         @endcan
                     </div>
