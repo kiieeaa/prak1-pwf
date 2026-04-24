@@ -44,6 +44,13 @@ Tugas prak 6
 Tugas prak 7
 <img width="2560" height="1600" alt="Screenshot 2026-04-17 090427" src="https://github.com/user-attachments/assets/80631e9d-dea5-4459-8516-3cb756874ae6" />
 
+UTS
+<img width="2560" height="1600" alt="Screenshot 2026-04-24 184734" src="https://github.com/user-attachments/assets/8be9b689-420a-448a-bed9-84e08cf2b488" />
+<img width="2560" height="1600" alt="Screenshot 2026-04-24 192818" src="https://github.com/user-attachments/assets/02e59e00-b9a3-4cf9-a529-8934b3548809" />
+<img width="2560" height="1600" alt="Screenshot 2026-04-24 193118" src="https://github.com/user-attachments/assets/b569a3ff-1696-4c3a-bba7-d0703f7ff455" />
+<img width="2560" height="1600" alt="Screenshot 2026-04-24 193724" src="https://github.com/user-attachments/assets/7cdb7374-46e1-4b1a-b81f-3a7ff6051ea8" />
+<img width="2560" height="1600" alt="Screenshot 2026-04-24 193745" src="https://github.com/user-attachments/assets/3a8dc303-191e-4f73-96f6-d67e87e5e0a3" />
+<img width="2560" height="1600" alt="Screenshot 2026-04-24 184722" src="https://github.com/user-attachments/assets/50b3f0ff-43e4-47f7-9be7-9cf1e51cd9ff" />
 
 
 
