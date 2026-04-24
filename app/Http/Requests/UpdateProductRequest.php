@@ -23,7 +23,7 @@ class UpdateProductRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'category_id' => 'nullable|exists:categories,id',
+            'category_id' => 'nullable|exists:categories,id', // 'nullable' membolehkan produk disimpan dengan nilai kategori kosong jika kategorinya telah dihapus
             'quantity' => 'required|integer',
             'price' => 'required|numeric',
         ];

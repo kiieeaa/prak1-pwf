@@ -14,6 +14,7 @@ class ProductController extends Controller
 {
     public function index()
     {
+        // Mengambil semua data produk beserta relasi kategorinya dan user pembuatnya
         $products = Product::with(['category', 'user'])->get();
         return view('products.index', compact('products'));
     }
@@ -25,6 +26,7 @@ class ProductController extends Controller
 
     public function create()
     {
+        // Mengambil semua kategori dari database untuk ditampilkan di dropdown form tambah produk
         $categories = Category::all();
         return view('products.create', compact('categories'));
     }
@@ -62,6 +64,7 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
+        // Mengambil semua kategori untuk pilihan edit
         $categories = Category::all();
         return view('products.edit', compact('product', 'categories'));
     }

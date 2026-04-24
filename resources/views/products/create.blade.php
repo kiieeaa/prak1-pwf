@@ -23,9 +23,11 @@
                         </div>
 
                         <div class="mb-4">
+                            <!-- Menampilkan dropdown pilihan kategori untuk produk yang sedang dibuat -->
                             <label for="category_id" class="block text-sm font-medium text-gray-700">Kategori</label>
                             <select name="category_id" id="category_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 <option value="">-- Pilih Kategori --</option>
+                                <!-- Melakukan looping terhadap semua data kategori yang dikirim dari controller -->
                                 @foreach($categories as $category)
                                     <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
                                 @endforeach

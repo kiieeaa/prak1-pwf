@@ -17,6 +17,8 @@ class Product extends Model
         return $this->belongsTo(User::class);
     }
 
+    // Membuat relasi 'belongsTo' ke model Category
+    // Artinya: Setiap produk pasti dimiliki atau tergabung dalam satu kategori (Many-to-One)
     public function category()
     {
         return $this->belongsTo(Category::class);

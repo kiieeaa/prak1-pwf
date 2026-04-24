@@ -24,6 +24,8 @@ require __DIR__.'/auth.php';
 Route::resource('products', App\Http\Controllers\ProductController::class)
     ->middleware(['auth', 'verified']);
 
+// Rute untuk kategori, menggunakan middleware 'can:manage-category'
+// Artinya hanya pengguna dengan hak akses (gate) 'manage-category' (yakni admin) yang dapat mengakses halaman ini
 Route::middleware(['auth', 'can:manage-category'])->group(function () {
     Route::resource('categories', App\Http\Controllers\CategoryController::class);
 });

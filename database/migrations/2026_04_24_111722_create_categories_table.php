@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            // Membuat kolom 'name' bertipe varchar (string) yang datanya tidak boleh kembar (unique)
             $table->string('name')->unique();
             $table->timestamps();
         });

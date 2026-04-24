@@ -25,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
             return $user->role === 'admin';
         });
 
+        // Mendifinisikan aturan hak akses baru dengan nama 'manage-category'
+        // Hanya user yang memiliki role 'admin' yang mendapatkan nilai true (boleh mengakses)
         Gate::define('manage-category', function (User $user) {
             return $user->role === 'admin';
         });

@@ -23,7 +23,7 @@ class StoreProductRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'category_id' => 'nullable|exists:categories,id',
+            'category_id' => 'nullable|exists:categories,id', // 'nullable' membolehkan produk tidak memiliki kategori (atau kategorinya sudah terhapus)
             'quantity' => 'required|integer',
             'price' => 'required|numeric',
         ];
