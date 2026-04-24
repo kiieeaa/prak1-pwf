@@ -23,7 +23,7 @@ class UpdateProductRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'kategori' => 'nullable|string|max:255',
+            'category_id' => 'nullable|exists:categories,id',
             'quantity' => 'required|integer',
             'price' => 'required|numeric',
         ];

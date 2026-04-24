@@ -24,6 +24,6 @@ require __DIR__.'/auth.php';
 Route::resource('products', App\Http\Controllers\ProductController::class)
     ->middleware(['auth', 'verified']);
 
-Route::middleware(['auth', 'can:manage-product'])->group(function () {
-    Route::resource('kategoris', App\Http\Controllers\KategoriController::class);
+Route::middleware(['auth', 'can:manage-category'])->group(function () {
+    Route::resource('categories', App\Http\Controllers\CategoryController::class);
 });

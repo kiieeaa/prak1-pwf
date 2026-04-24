@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Support\Facades\Auth;
@@ -13,7 +14,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::with(['kategoris', 'user'])->get();
+        $products = Product::with(['category', 'user'])->get();
         return view('products.index', compact('products'));
     }
 
@@ -24,24 +25,19 @@ class ProductController extends Controller
 
     public function create()
     {
-        return view('products.create');
+        $categories = Category::all();
+        return view('products.create', compact('categories'));
     }
 
     public function store(StoreProductRequest $request)
     {
         $validated = $request->validated();
-        $kategoriName = $validated['kategori'] ?? null;
-        unset($validated['kategori']);
-
         $validated['user_id'] = Auth::id();
         $validated['qty'] = $validated['quantity'];
         unset($validated['quantity']);
 
         try {
-            $product = Product::create($validated);
-            if ($kategoriName) {
-                $product->kategoris()->create(['name' => $kategoriName]);
-            }
+            Product::create($validated);
             return redirect()
                 ->route('products.index')
                 ->with('success', 'Product created successfully.');
@@ -66,27 +62,18 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
-        return view('products.edit', compact('product'));
+        $categories = Category::all();
+        return view('products.edit', compact('product', 'categories'));
     }
 
     public function update(UpdateProductRequest $request, Product $product)
     {
         $validated = $request->validated();
-        $kategoriName = $validated['kategori'] ?? null;
-        unset($validated['kategori']);
-
         $validated['qty'] = $validated['quantity'];
         unset($validated['quantity']);
 
         try {
             $product->update($validated);
-            
-            if ($kategoriName) {
-                $product->kategoris()->delete();
-                $product->kategoris()->create(['name' => $kategoriName]);
-            } elseif ($request->has('kategori') && empty($kategoriName)) {
-                $product->kategoris()->delete();
-            }
 
             return redirect()
                 ->route('products.index')

@@ -23,9 +23,14 @@
                         </div>
 
                         <div class="mb-4">
-                            <label for="kategori" class="block text-sm font-medium text-gray-700">Kategori</label>
-                            <input type="text" name="kategori" id="kategori" value="{{ old('kategori') }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                            @error('kategori')
+                            <label for="category_id" class="block text-sm font-medium text-gray-700">Kategori</label>
+                            <select name="category_id" id="category_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                <option value="">-- Pilih Kategori --</option>
+                                @foreach($categories as $category)
+                                    <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                            @error('category_id')
                                 <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>

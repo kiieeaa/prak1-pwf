@@ -41,9 +41,11 @@
                                         <a href="{{ route('products.show', $product->id) }}" class="hover:text-indigo-600 hover:underline">{{ $product->name }}</a>
                                     </td>
                                     <td class="py-4 px-6">
-                                        @foreach($product->kategoris as $cat)
-                                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">{{ $cat->name }}</span>
-                                        @endforeach
+                                        @if($product->category)
+                                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">{{ $product->category->name }}</span>
+                                        @else
+                                            <span class="text-gray-400 italic">No Category</span>
+                                        @endif
                                     </td>
                                     <td class="py-4 px-6">Rp {{ number_format($product->price, 0, ',', '.') }}</td>
                                     <td class="py-4 px-6">{{ $product->qty }}</td>
